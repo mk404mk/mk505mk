@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%; /* Make the button width 100% of its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  /* max-width: 300px; /*Optional: Set a maximum width for the button */
+}
+
+#question-container {
+  margin-top: 20px;
+}
+
+.option {
+  display: block;
+  padding: 10px;
+  background-color: #e0e0e0;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.option.correct {
+  background-color: #a5d6a7;
+}
+
+.option.incorrect {
+  background-color: #ef9a9a;
+}

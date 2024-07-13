@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mkQuiz200</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>mk Quiz24</h1>
+    <div id="start-screen">
+      <label for="question-count">Number of questions:</label>
+      <input type="number" id="question-count" min="1" value="15">
+      <br>
+      <label for="access-code">Access Code:</label>
+      <input type="text" id="access-code" value="Mk">
+      <br>
+      <label for="category">Select Category:</label>
+      <select id="category">
+        <option value="PC1">Progress Check 1</option>
+        <option value="PC2">Progress Check 2</option>
+        <option value="ACP">Air Conditioning & Pressurization</option>
+        <option value="AO">Aircraft Overview</option>
+        <option value="APU">APU</option>
+        <option value="AF">Autoflight</option>
+        <option value="COM">Communications</option>
+        <option value="DOORS">Doors</option>
+        <option value="EP">Electrical Power</option>
+        <option value="EQF">Equipment/Furnishings</option>
+        <option value="FP">Fire Protection</option>
+        <option value="FC">Flight Controls</option>
+        <option value="FUEL">Fuel</option>
+        <option value="HP">Hydraulic Power</option>
+        <option value="INSTR">Ice & Rain Protection</option>
+        <option value="IR">Indicating/Recording Systems</option>
+        <option value="IRS">Instruments</option>
+        <option value="LGB">Landing Gear & Brakes</option>
+        <option value="LIGHT">Lights</option>
+        <option value="NAVS">Navigation</option>
+        <option value="OEE">Oxygen & Emergency Equipment</option>
+        <option value="PNM">Pneumatics</option>
+        <option value="PP">PowerPlant</option>
+        <option value="WW">Water & Waste</option>
+      </select>
+      <br>
+      <button id="start-button">Start Test</button>
+    </div>
+    <div id="quiz-screen" style="display: none;">
+      <div id="question-container"></div>
+      <button id="next-button" style="display: none;">Next Question</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+</html>
