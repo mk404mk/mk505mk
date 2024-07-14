@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Iterate through all selected questions
     selectedQuestions.forEach((question, index) => {
       const isLastQuestion = index === selectedQuestions.length - 1;
-console.log(question.question)
       // Create div for each question
       const questionDiv = document.createElement('div');
       questionDiv.innerHTML = `
