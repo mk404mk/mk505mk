@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('start-button').addEventListener('click', startQuiz);
   nextButton.addEventListener('click', showNextQuestion);
 
+
   function startQuiz() {
     const questionCount = parseInt(questionCountInput.value);
     if (isNaN(questionCount) || questionCount <= 0) {
@@ -22,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const accessCode = document.getElementById('access-code').value.trim(); // Get the access code and trim whitespace
 
-  // Validate access code
-  if (accessCode !== 'Mk') {
-    alert('Incorrect access code. Please enter the correct access code to start the quiz.');
-    return;
-  }
+    // Validate access code
+    if (accessCode !== 'Mk') {
+      alert('Incorrect access code. Please enter the correct access code to start the quiz.');
+      return;
+    }
 
     const category = categorySelect.value;
     const jsonFileName = `qs/${category}.json`;
@@ -65,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
       optionElement.addEventListener('click', () => selectAnswer(optionElement, question));
     });
 
-   // nextButton.style.display = 'none';
   }
 
   function selectAnswer(selectedElement, question) {
@@ -89,11 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     nextButton.style.display = 'block';
   }
-  function decryptJSON(ciphertext, key) {
-    const bytes = CryptoJS.AES.decrypt(ciphertext, key);
-    const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-    return decryptedData;
-  }
+
   function showNextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < selectedQuestions.length) {
@@ -103,5 +99,15 @@ document.addEventListener('DOMContentLoaded', function () {
       startScreen.style.display = 'block';
       quizScreen.style.display = 'none';
     }
+  }
+
+ 
+  // Example decryptJSON function, replace with your actual decryption logic
+  function decryptJSON(encryptedData, key) {
+    // Implement your decryption logic here
+    // Example: using CryptoJS AES decryption
+    const decryptedBytes = CryptoJS.AES.decrypt(encryptedData, key);
+    const decryptedData = JSON.parse(decryptedBytes.toString(CryptoJS.enc.Utf8));
+    return decryptedData;
   }
 });

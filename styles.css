@@ -21,6 +21,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+
 button {
   padding: 10px 20px;
   margin-top: 20px;
@@ -41,6 +42,11 @@ button {
   margin: 5px 0;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.correct {
+  background-color: green;
+  color: rgb(14, 4, 58);
 }
 
 .option.correct {
