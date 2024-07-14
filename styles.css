@@ -34,6 +34,8 @@ button {
 
 #question-container {
   margin-top: 20px;
+  height: auto;
+  overflow-y: auto;
 }
 
 .option {
@@ -56,4 +58,8 @@ button {
 
 .option.incorrect {
   background-color: #ef9a9a;
+}
+#quiz-screen {
+  height: 100%;
+  overflow-y: auto;
 }

@@ -161,13 +161,20 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
   
-        // Set innerHTML of questionContainer
-        //questionContainer.innerHTML = html;
-  
-        // Hide next button since all questions are shown
+        // Show the question container
+        questionContainer.style.display = 'block';
+       
+
+        // Ensure the container is scrollable
+        quizScreen.style.overflowY = 'auto';
+        questionContainer.style.overflowY = 'auto';
+        questionContainer.style.maxHeight = '80vh'; // Adjust the max-height as needed
+
+        // Hide the next button since all questions are shown
         startScreen.style.display = 'none';
-        quizScreen.style.display = 'block';
+
         nextButton.style.display = 'none';
+        quizScreen.style.display = 'block';
       })
     //  .catch(error => console.error('Error loading JSON:', error));
   })}
