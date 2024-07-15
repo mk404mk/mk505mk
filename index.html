@@ -3,63 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mkQuiz200</title>
+  <title>Dynamic Search</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>mk Quiz24</h1>
-    <div id="start-screen">
+  <br>
+  <br>
+  <br>
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Type to search...">
 
-      <br>
-      <label for="question-count">Number of questions:</label>
-      <input type="number" id="question-count" min="1" value="15">
-      <br>
-      <label for="access-code">Access Code:</label>
-      <input type="text" id="access-code" value="Mk">
-      <br>
-      <label for="category">Select Category:</label>
-      <select id="category">
-        <option value="FTKE">FTKE A (248)</option>
-        <option value="FLIM">FTKE Limit, M&B, Perf. (64)</option>
-        <option value="PC1">Progress Check 1 (240)</option>
-        <option value="PC2">Progress Check 2 (190)</option>
-        <option value="ACP">Air Conditioning & Pressurization (30)</option>
-        <option value="AO">Aircraft Overview (15)</option>
-        <option value="APU">APU (20)</option>
-        <option value="AF">Autoflight (30)</option>
-        <option value="COM">Communications (15)</option>
-        <option value="DOORS">Doors (15)</option>
-        <option value="EP">Electrical Power (30)</option>
-        <option value="EQF">Equipment/Furnishings (10)</option>
-        <option value="FP">Fire Protection (25)</option>
-        <option value="FC">Flight Controls (30)</option>
-        <option value="FUEL">Fuel (25)</option>
-        <option value="HP">Hydraulic Power (25)</option>
-        <option value="INSTR">Ice & Rain Protection (25)</option>
-        <option value="IR">Indicating/Recording Systems (30)</option>
-        <option value="IRS">Instruments (30)</option>
-        <option value="LGB">Landing Gear & Brakes (25)</option>
-        <option value="LIGHT">Lights (10)</option>
-        <option value="NAVS">Navigation (30)</option>
-        <option value="OEE">Oxygen & Emergency Equipment (15)</option>
-        <option value="PNM">Pneumatics (15)</option>
-        <option value="PP">PowerPlant (30)</option>
-        <option value="WW">Water & Waste (10)</option>
-      </select>
-      <br>
-      <button id="start-button">Start Test</button>
-      <br>
-      <button id="show-all-button">Show All</button>
+    <button id="searchButton">Search</button>
+    <button id="clearButton">Clear</button>
 
-    </div>
-    <div id="quiz-screen" style="display: none;">
-      <div id="question-container"></div>
-      <button id="next-button" style="display: none;">Next Question</button>
-    </div>
   </div>
-  <script src="script.js"></script>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <div id="results"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
