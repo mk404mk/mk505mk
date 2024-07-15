@@ -1,73 +1,65 @@
 body {
-    background-color: #0f0f0f;
-    color: #00ff00;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  h1 {
-    color: #00ff00;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  input[type="text"], button {
-    background-color: #333333;
-    color: #04ba04;
-    border: 1px solid #026a02;
-    padding: 10px;
-    margin: 5px;
-    width: calc(100% - 24px);
-    box-sizing: border-box;
-  }
-  
-  input[type="text"]:focus, button:focus {
-    outline: none;
-    border-color: #04ba04;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  #results {
-    margin-top: 20px;
-  }
-  
-  .result {
-    background-color: #0f0f0f;
-    border: 1px solid #000000;
-    padding: 10px;
-    margin: 10px 0;
-    color: white;
-    font-style: bold;
-  }
-  
-  .result div {
-    margin-bottom: 5px;
-  }
-  
-  .result ul {
-    list-style-type: none;
-    padding: 0;
-    color: rgb(105, 136, 2);
-  }
-  
-  .result li {
-    padding: 5px;
-  }
-  
-  .answer {
-    color: #02a502;
-    font-weight: bold;
-  }
-  
-  #searchButton, #clearButton {
-    display: inline-block;
-    width: calc(50% - 15px);
-    margin: 5px 5px;
-  }
-  
-  input::placeholder {
-    color: #018e01;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f6dddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(231, 213, 213);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: rgb(4, 92, 35);
+}
+
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%; /* Make the button width 100% of its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  /* max-width: 300px; /*Optional: Set a maximum width for the button */
+}
+
+#question-container {
+  margin-top: 20px;
+  height: auto;
+  overflow-y: auto;
+}
+
+.option {
+  display: block;
+  padding: 10px;
+  background-color: #e0e0e0;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.correct {
+  background-color: green;
+  color: rgb(14, 4, 58);
+}
+
+.option.correct {
+  background-color: #a5d6a7;
+}
+
+.option.incorrect {
+  background-color: #ef9a9a;
+}
+#quiz-screen {
+  height: 100%;
+  overflow-y: auto;
+}
